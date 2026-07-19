@@ -688,6 +688,11 @@ export function calculateBPModsChampions(
     desc.isHelpingHand = true;
   }
 
+  if (field.attackerSide.isCharge && move.hasType('Electric')) {
+    bpMods.push(8192);
+    desc.isCharge = true;
+  }
+
   // Field effects
 
   const terrainMultiplier = 5325;

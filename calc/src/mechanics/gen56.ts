@@ -646,6 +646,11 @@ export function calculateBPModsBWXY(
     resistedKnockOffDamage = true;
   }
 
+  if (field.attackerSide.isCharge && move.hasType('Electric')) {
+    bpMods.push(8192);
+    desc.isCharge = true;
+  }
+
 
   // Use BasePower after moves with custom BP to determine if Technician should boost
   if ((attacker.hasAbility('Technician') && basePower <= 60) ||

@@ -1137,6 +1137,11 @@ export function calculateBPModsSMSSSV(
     desc.isHelpingHand = true;
   }
 
+  if (field.attackerSide.isCharge && move.hasType('Electric')) {
+    bpMods.push(8192);
+    desc.isCharge = true;
+  }
+
   // Field effects
 
   const terrainMultiplier = gen.num > 7 ? 5325 : 6144;
