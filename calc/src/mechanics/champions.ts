@@ -692,11 +692,6 @@ export function calculateBPModsChampions(
     desc.isHelpingHand = true;
   }
 
-  if (field.attackerSide.isCharge && move.hasType('Electric')) {
-    bpMods.push(8192);
-    desc.isCharge = true;
-  }
-
   // Field effects
 
   const terrainMultiplier = 5325;
@@ -728,6 +723,11 @@ export function calculateBPModsChampions(
   ) {
     bpMods.push(6144);
     desc.attackerAbility = attacker.ability;
+  }
+
+  if (field.attackerSide.isCharge && move.hasType('Electric')) {
+    bpMods.push(8192);
+    desc.isCharge = true;
   }
 
   const aura = `${move.type} Aura`;
