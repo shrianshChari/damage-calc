@@ -274,7 +274,7 @@ $(".ability").bind("keyup change", function () {
 
 	var TOGGLE_ABILITIES = {
 		on: ['Intimidate', 'Slow Start', 'Teraform Zero'],
-		off: ['Flash Fire', 'Minus', 'Plus', 'Unburden', 'Analytic', 'Stakeout'],
+		off: ['Flash Fire', 'Minus', 'Plus', 'Unburden', 'Analytic', 'Stakeout', 'Electromorphosis'],
 	};
 
 	if (gen !== 8) {

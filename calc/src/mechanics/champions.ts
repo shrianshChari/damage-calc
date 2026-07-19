@@ -185,6 +185,10 @@ export function calculateChampions(
     field.defenderSide.isAuroraVeil = false;
   }
 
+  if (attacker.hasAbility('Electromorphosis') && attacker.abilityOn) {
+    field.attackerSide.isCharge = true;
+  }
+
   let hasAteAbilityTypeChange = false;
   let isAerilate = false;
   let isDragonize = false;

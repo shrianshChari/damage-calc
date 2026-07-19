@@ -330,6 +330,10 @@ export function calculateSMSSSV(
     field.defenderSide.isAuroraVeil = false;
   }
 
+  if (attacker.hasAbility('Electromorphosis') && attacker.abilityOn) {
+    field.attackerSide.isCharge = true;
+  }
+
   let hasAteAbilityTypeChange = false;
   let isAerilate = false;
   let isPixilate = false;
